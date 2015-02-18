@@ -97,7 +97,7 @@ PROPRIETARY_DEVICE_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 mkdir -p $PROPRIETARY_DEVICE_DIR
 
-for NAME in audio etc etc/acdbdata/MTP etc/firmware egl hw nfc camera/LGI02BN1 camera/SEM02BN1 camera/SOI20BS1 root chargemon_data
+for NAME in audio etc etc/acdbdata/Fluid etc/acdbdata/Liquid etc/acdbdata/MTP etc/firmware egl hw nfc camera/LGI02BN1 camera/SEM02BN1 camera/SOI20BS1 root chargemon_data
 do
     mkdir -p $PROPRIETARY_DEVICE_DIR/$NAME
 done
@@ -407,6 +407,30 @@ copy_files "$COMMON_ETC" "system/etc" "etc"
 copy_files_glob "*" "system/etc/tfa98xx" "audio"
 copy_files_glob "*.bin" "system/etc/sforce" "audio"
 
+COMMON_ETC_ACDBDATA_Fluid="
+	Fluid_Bluetooth_cal.acdb
+	Fluid_General_cal.acdb
+	Fluid_Global_cal.acdb
+	Fluid_Handset_cal.acdb
+	Fluid_Hdmi_cal.acdb
+	Fluid_Headset_cal.acdb
+	Fluid_Speaker_cal.acdb
+	"
+
+copy_files "$COMMON_ETC_ACDBDATA_Fluid" "system/etc/acdbdata/Fluid" "etc/acdbdata/Fluid"
+
+COMMON_ETC_ACDBDATA_Liquid="
+	Liquid_Bluetooth_cal.acdb
+	Liquid_General_cal.acdb
+	Liquid_Global_cal.acdb
+	Liquid_Handset_cal.acdb
+	Liquid_Hdmi_cal.acdb
+	Liquid_Headset_cal.acdb
+	Liquid_Speaker_cal.acdb
+	"
+
+copy_files "$COMMON_ETC_ACDBDATA_Liquid" "system/etc/acdbdata/Liquid" "etc/acdbdata/Liquid"
+
 COMMON_ETC_ACDBDATA_MTP="
 	MTP_Bluetooth_cal.acdb
 	MTP_General_cal.acdb
@@ -416,6 +440,7 @@ COMMON_ETC_ACDBDATA_MTP="
 	MTP_Headset_cal.acdb
 	MTP_Speaker_cal.acdb
 	"
+
 copy_files "$COMMON_ETC_ACDBDATA_MTP" "system/etc/acdbdata/MTP" "etc/acdbdata/MTP"
 
 COMMON_IDC=clearpad.idc
