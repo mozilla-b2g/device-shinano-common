@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/volume.cfg:system/etc/volume.cfg \
   $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
+  $(LOCAL_PATH)/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
 PRODUCT_PROPERTY_OVERRIDES += \
