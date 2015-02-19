@@ -392,6 +392,7 @@ COMMON_ETC="
 	mixer_paths.xml
 	mixer_paths_auxpcm.xml
 	xtwifi.conf
+	set_governor.sh
 	flashled_calc_parameters.cfg
 	iddd.conf
 	dsx_param_file.bin
