@@ -365,6 +365,7 @@ COMMON_BINS="
 	display_color_calib
 	touchscreend
 	chargemon
+	clearpad_fwloader
 	"
 
 copy_files "$COMMON_BINS" "system/bin" ""
@@ -401,6 +402,7 @@ COMMON_ETC="
 	ramdump_ssr.xml
 	libnfc-brcm.conf
 	libnfc-nxp.conf
+	pre_hw_config.sh
 	"
 copy_files "$COMMON_ETC" "system/etc" "etc"
 
