@@ -173,11 +173,24 @@ copy_files()
 # $1 = pattern/glob
 # $2 = directory path on device
 # $3 = directory name in $PROPRIETARY_DEVICE_DIR
+# $4 = list of files to exclude
 copy_files_glob()
 {
-    for NAME in "${ANDROIDFS_DIR}/$2/"$1
+    DEVICE_PATH=$2
+    BLOB_PATH=$3
+
+    EXCLUDED=""
+    if [ ! -z "$4" ]; then
+        for EXCL in $4
+        do
+            echo "Excluding $EXCL"
+            EXCLUDED="$EXCLUDED -not -name ${EXCL}"
+        done
+    fi;
+
+    for NAME in $(find "${ANDROIDFS_DIR}/${DEVICE_PATH}/" -maxdepth 1 -type f -name "$1" ${EXCLUDED})
     do
-        copy_file "`basename $NAME`" "$2" "$3"
+        copy_file "`basename $NAME`" "${DEVICE_PATH}" "${BLOB_PATH}"
     done
 }
 
@@ -308,7 +321,11 @@ copy_files "effect_init_params" "system/vendor/etc" "audio"
 copy_files_glob "*.so" "system/vendor/lib/rfsa/adsp" "audio"
 copy_files_glob "*.so" "system/vendor/lib/soundfx" "audio"
 
-copy_files_glob "lib*.so" "system/vendor/lib" ""
+COMMON_VENDOR_LIBS_EXCLUDED="
+	libwvm.so
+	"
+
+copy_files_glob "lib*.so" "system/vendor/lib" "" "$COMMON_VENDOR_LIBS_EXCLUDED"
 
 copy_files_glob "*.png" "system/somc/chargemon/data/msg" "chargemon_data"
 copy_files_glob "*.png" "system/somc/chargemon/data/num" "chargemon_data"
