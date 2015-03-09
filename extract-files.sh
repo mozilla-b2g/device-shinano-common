@@ -82,8 +82,8 @@ echo Pulling files from ${ANDROIDFS_DIR}
 DEVICE_BUILD_ID=`cat ${ANDROIDFS_DIR}/system/build.prop | grep ro.build.display.id | sed -e 's/ro.build.display.id=//' | tr -d '\n\r'`
 DEVICE_BUILD_VERSION_SDK=`cat ${ANDROIDFS_DIR}/system/build.prop | grep ro.build.version.sdk | sed -e 's/ro.build.version.sdk=//' | tr -d '\n\r'`
 
-if [[ "$DEVICE_BUILD_VERSION_SDK" -ne 19 ]]; then
-    echo Invalid system backup - Wrong base version found.
+if [[ "${DEVICE_BUILD_ID}" != "23.0.1.A.5.77" ]]; then
+    echo Invalid system backup - Wrong base version found: ${DEVICE_BUILD_ID}.
     echo
     echo Do this:
     echo 1. Delete backup-${DEVICE}
