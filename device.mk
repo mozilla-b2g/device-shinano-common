@@ -16,6 +16,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.moz.nfc.enabled=true \
   ro.moz.bluetooth.backend=bluetoothd \
+  ro.moz.ril.ipv6=true \
+  ro.moz.ril.signal_extra_int=true \
 
 PRODUCT_PACKAGES += \
   bcm4339.ko  \
