@@ -383,6 +383,7 @@ COMMON_BINS="
 	touchscreend
 	chargemon
 	clearpad_fwloader
+	taimport
 	"
 
 copy_files "$COMMON_BINS" "system/bin" ""
