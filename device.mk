@@ -13,6 +13,9 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+  ro.adb.secure=0 \
+
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.moz.nfc.enabled=true \
   ro.moz.bluetooth.backend=bluetoothd \
