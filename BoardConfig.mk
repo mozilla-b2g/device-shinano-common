@@ -15,7 +15,11 @@ AUDIO_FEATURE_DISABLED_SSR := true
 BOARD_USBIMAGE_PARTITION_SIZE_KB :=
 
 ENABLE_LIBRECOVERY := true
-RECOVERY_EXTERNAL_STORAGE := /storage/sdcard1
+#RECOVERY_EXTERNAL_STORAGE := /storage/sdcard1
+# /data/media/0 maps to /storage/sdcard0 which is the internal sdcard.
+RECOVERY_EXTERNAL_STORAGE := /data/media/0
+
+TARGET_RECOVERY_FSTAB := device/sony/shinano-common/recovery.fstab
 
 TARGET_PROVIDES_INIT_RC := true
 

@@ -24,3 +24,4 @@ PRODUCT_PACKAGES += \
   librecovery \
   nfcd        \
   rilproxy    \
+  init.sh     \
