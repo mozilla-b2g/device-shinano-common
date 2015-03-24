@@ -380,7 +380,6 @@ COMMON_BINS="
 	gsiff_daemon
 	hvdcp
 	display_color_calib
-	touchscreend
 	chargemon
 	clearpad_fwloader
 	taimport
