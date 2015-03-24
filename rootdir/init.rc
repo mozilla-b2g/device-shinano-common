@@ -468,6 +468,11 @@ service vold /system/bin/vold
     socket vold stream 0660 root mount
     ioprio be 2
 
+# Make sure we have a proper time and set being set
+service timekeep /system/bin/timekeep restore
+    class core
+    oneshot
+
 service netd /system/bin/netd
     class main
     socket netd stream 0660 root system

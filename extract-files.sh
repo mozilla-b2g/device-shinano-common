@@ -355,7 +355,6 @@ COMMON_BINS="
 	rfs_access
 	rmt_storage
 	sensors.qcom
-	time_daemon
 	xtwifi-client
 	xtwifi-inet-agent
 	iddd
