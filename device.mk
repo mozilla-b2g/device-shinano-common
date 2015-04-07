@@ -16,6 +16,7 @@ PRODUCT_COPY_FILES += \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+  persist.sys.usb.config=mass_storage \
   ro.adb.secure=0 \
 
 PRODUCT_PROPERTY_OVERRIDES += \
