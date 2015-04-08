@@ -13,6 +13,8 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
   $(LOCAL_PATH)/timekeep-service/TimeKeepService.js:system/b2g/distribution/bundles/timekeep/TimeKeepService.js \
   $(LOCAL_PATH)/timekeep-service/chrome.manifest:system/b2g/distribution/bundles/timekeep/chrome.manifest \
+  $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+  $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
