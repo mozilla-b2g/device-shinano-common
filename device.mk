@@ -6,6 +6,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
 PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
+  $(LOCAL_PATH)/rootdir/init.shinano.pwr.rc:root/init.shinano.pwr.rc \
 
 PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/volume.cfg:system/etc/volume.cfg \
@@ -13,6 +14,7 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
   $(LOCAL_PATH)/timekeep-service/TimeKeepService.js:system/b2g/distribution/bundles/timekeep/TimeKeepService.js \
   $(LOCAL_PATH)/timekeep-service/chrome.manifest:system/b2g/distribution/bundles/timekeep/chrome.manifest \
+  $(LOCAL_PATH)/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -34,3 +36,4 @@ PRODUCT_PACKAGES += \
   rilproxy    \
   init.sh     \
   timekeep    \
+  thermanager \

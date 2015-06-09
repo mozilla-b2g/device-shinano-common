@@ -12,6 +12,7 @@ import /init.usb.rc
 import /init.${ro.hardware}.rc
 import /init.trace.rc
 import /init.b2g.rc
+import /init.shinano.pwr.rc
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -582,3 +583,9 @@ service fakebattery /system/bin/fakebattery
 service sensorservice /system/bin/sensorservice
     class main
     user root
+
+#OSS thermal management
+service thermanager /system/bin/thermanager /system/etc/thermanager.xml
+    class main
+    user root
+    group root

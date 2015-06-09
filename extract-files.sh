@@ -97,7 +97,7 @@ PROPRIETARY_DEVICE_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 mkdir -p $PROPRIETARY_DEVICE_DIR
 
-for NAME in audio etc etc/acdbdata/Fluid etc/acdbdata/Liquid etc/acdbdata/MTP etc/firmware egl hw nfc camera/LGI02BN1 camera/SEM02BN1 camera/SOI20BS1 root chargemon_data
+for NAME in audio etc etc/acdbdata/Fluid etc/acdbdata/Liquid etc/acdbdata/MTP etc/firmware egl hw nfc camera/LGI02BN1 camera/SEM02BN1 camera/SOI20BS1 root
 do
     mkdir -p $PROPRIETARY_DEVICE_DIR/$NAME
 done
@@ -296,7 +296,6 @@ COMMON_LIBS="
 	libaudioflinger.so
 	libmedia.so
 	libdisplayservice.so
-	libsomc_thermal.so
 	libreference-ril.so
 	librilutils.so
 	libril.so
@@ -326,10 +325,6 @@ COMMON_VENDOR_LIBS_EXCLUDED="
 	"
 
 copy_files_glob "lib*.so" "system/vendor/lib" "" "$COMMON_VENDOR_LIBS_EXCLUDED"
-
-copy_files_glob "*.png" "system/somc/chargemon/data/msg" "chargemon_data"
-copy_files_glob "*.png" "system/somc/chargemon/data/num" "chargemon_data"
-copy_files_glob "*.png" "system/somc/chargemon/data/scale" "chargemon_data"
 
 COMMON_BINS="
 	adsprpcd
@@ -379,7 +374,6 @@ COMMON_BINS="
 	gsiff_daemon
 	hvdcp
 	display_color_calib
-	chargemon
 	clearpad_fwloader
 	taimport
 	"
