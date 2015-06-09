@@ -323,6 +323,7 @@ copy_files_glob "*.so" "system/vendor/lib/soundfx" "audio"
 
 COMMON_VENDOR_LIBS_EXCLUDED="
 	libwvm.so
+	libExtendedExtractor.so
 	"
 
 copy_files_glob "lib*.so" "system/vendor/lib" "" "$COMMON_VENDOR_LIBS_EXCLUDED"
