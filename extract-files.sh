@@ -97,7 +97,7 @@ PROPRIETARY_DEVICE_DIR=../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 mkdir -p $PROPRIETARY_DEVICE_DIR
 
-for NAME in audio etc etc/acdbdata/Fluid etc/acdbdata/Liquid etc/acdbdata/MTP etc/firmware egl hw nfc camera/LGI02BN1 camera/SEM02BN1 camera/SOI20BS1 root chargemon_data
+for NAME in audio etc etc/acdbdata/Fluid etc/acdbdata/Liquid etc/acdbdata/MTP etc/dhcpcd/dhcpcd-hooks etc/firmware egl hw nfc camera/LGI02BN1 camera/SEM02BN1 camera/SOI20BS1 root chargemon_data
 do
     mkdir -p $PROPRIETARY_DEVICE_DIR/$NAME
 done
@@ -461,6 +461,12 @@ COMMON_ETC_ACDBDATA_MTP="
 	"
 
 copy_files "$COMMON_ETC_ACDBDATA_MTP" "system/etc/acdbdata/MTP" "etc/acdbdata/MTP"
+
+COMMON_ETC_DHCPCD_DHCPCDHOOKS="
+        95-configured
+        "
+
+copy_files "$COMMON_ETC_DHCPCD_DHCPCDHOOKS" "system/etc/dhcpcd/dhcpcd-hooks" "etc/dhcpcd/dhcpcd-hooks"
 
 COMMON_IDC=clearpad.idc
 
