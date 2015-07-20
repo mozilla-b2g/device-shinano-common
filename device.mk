@@ -23,6 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.moz.nfc.enabled=true \
   ro.moz.bluetooth.backend=bluetoothd \
   ro.moz.ril.signal_extra_int=true \
+  ro.moz.ril.avlbl_nw_extra_str=true \
 
 PRODUCT_PACKAGES += \
   bcm4339.ko  \
