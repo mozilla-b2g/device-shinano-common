@@ -34,3 +34,6 @@ PRODUCT_PACKAGES += \
   rilproxy    \
   init.sh     \
   timekeep    \
+
+# Needed to make sure bug 1177411 cannot resurface
+export FOTA_DEVICE_DATA_FILES := /data/misc/dhcp/dhcpcd-wlan0.lease
