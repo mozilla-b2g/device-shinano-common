@@ -1,5 +1,3 @@
-# Use default Gecko location if it's not provided in config files.
-GECKO_PATH ?= gecko
 
 B2G_SYSTEM_APPS := 1
 
@@ -31,8 +29,10 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 selinux=0 msm_rt
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/$(TARGET_DEVICE)/bluetooth \
-                                               $(GECKO_PATH)/dom/bluetooth/bluedroid
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR :=
+  device/sony/$(TARGET_DEVICE)/bluetooth \
+  hardware/libhardware_moz/include/hardware_moz/bluetooth/bluedroid
+
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_ATH_WLAN_AR6004 := true
 BOARD_WLAN_DEVICE := qcwcn
