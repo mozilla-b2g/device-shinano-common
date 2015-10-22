@@ -29,7 +29,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 selinux=0 msm_rt
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR :=
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := \
   device/sony/$(TARGET_DEVICE)/bluetooth \
   hardware/libhardware_moz/include/hardware_moz/bluetooth/bluedroid
 
