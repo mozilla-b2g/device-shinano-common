@@ -416,6 +416,7 @@ COMMON_ETC="
 	sap.conf
 	sec_config
 	sensor_def_qcomdev.conf
+	set_governor.sh
 	ramdump_ssr.xml
 	libnfc-brcm.conf
 	libnfc-nxp.conf
