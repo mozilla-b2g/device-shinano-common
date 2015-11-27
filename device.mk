@@ -13,6 +13,8 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
   hardware/sony/timekeep/gecko/TimeKeepService.js:system/b2g/distribution/bundles/timekeep/TimeKeepService.js \
   hardware/sony/timekeep/gecko/chrome.manifest:system/b2g/distribution/bundles/timekeep/chrome.manifest \
+  $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+  $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -34,6 +36,7 @@ PRODUCT_PACKAGES += \
   rilproxy    \
   init.sh     \
   timekeep    \
+  nfc_nci.pn54x.default \
 
 # Needed to make sure bug 1177411 cannot resurface
 export FOTA_DEVICE_DATA_FILES := /data/misc/dhcp/dhcpcd-wlan0.lease

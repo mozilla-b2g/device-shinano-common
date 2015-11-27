@@ -234,7 +234,6 @@ copy_files "$COMMON_ROOT_SBIN" "root/sbin" "root"
 copy_files_glob "*.png" "root/res/images/charger" "root"
 
 COMMON_LIBS="
-	libnfc-nci.so
 	libnfc_ndef.so
 	libcnefeatureconfig.so
 	libgps.utils.so
@@ -394,7 +393,6 @@ COMMON_HW="
 	camera.qcom.so
 	gps.default.so
 	keystore.qcom.so
-	nfc_nci_pn547.msm8974.so
 	lights.default.so
 	libdisplay.default.so
 	"
@@ -417,8 +415,6 @@ COMMON_ETC="
 	sec_config
 	sensor_def_qcomdev.conf
 	ramdump_ssr.xml
-	libnfc-brcm.conf
-	libnfc-nxp.conf
 	pre_hw_config.sh
 	"
 copy_files "$COMMON_ETC" "system/etc" "etc"
