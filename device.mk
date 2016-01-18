@@ -22,7 +22,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
   ro.adb.secure=0 \
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.moz.nfc.enabled=true \
   ro.moz.bluetooth.backend=bluetoothd \
   ro.moz.ril.signal_extra_int=true \
   ro.moz.ril.avlbl_nw_extra_str=true \
@@ -37,6 +36,8 @@ PRODUCT_PACKAGES += \
   init.sh     \
   timekeep    \
   nfc_nci.pn54x.default \
+
+EXPORT_DEVICE_PREFS := $(LOCAL_PATH)/prefs
 
 # Needed to make sure bug 1177411 cannot resurface
 export FOTA_DEVICE_DATA_FILES := /data/misc/dhcp/dhcpcd-wlan0.lease
