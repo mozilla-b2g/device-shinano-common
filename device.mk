@@ -38,9 +38,8 @@ PRODUCT_PACKAGES += \
   timekeep    \
   nfc_nci.pn54x.default \
 
-TARGET_GCC_VERSION_EXP := 4.8
-COMMON_GLOBAL_CFLAGS += -Wno-unused-parameter
-TARGET_GLOBAL_CPPFLAGS += -Wno-unused-parameter -Wno-sizeof-pointer-memaccess
+# Build Gecko with gcc-4.9
+GECKO_TOOLS_PREFIX = prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 
 # Needed to make sure bug 1177411 cannot resurface
 export FOTA_DEVICE_DATA_FILES := /data/misc/dhcp/dhcpcd-wlan0.lease
