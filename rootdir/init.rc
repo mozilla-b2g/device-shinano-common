@@ -586,3 +586,8 @@ service fakebattery /system/bin/fakebattery
 service sensorservice /system/bin/sensorservice
     class main
     user root
+
+# This is usually run in init.sony-platform.rc but depends
+# on Android's boot animation service, which we don't have.
+on property:sys.boot_completed=1
+    start set-governor

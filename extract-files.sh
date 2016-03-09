@@ -414,6 +414,7 @@ COMMON_ETC="
 	sap.conf
 	sec_config
 	sensor_def_qcomdev.conf
+	set_governor.sh
 	ramdump_ssr.xml
 	pre_hw_config.sh
 	"
