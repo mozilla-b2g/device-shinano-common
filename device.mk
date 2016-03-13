@@ -17,6 +17,9 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
   system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootrec-device:root/sbin/bootrec-device
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
   persist.sys.usb.config=mass_storage \
   ro.adb.secure=0 \
